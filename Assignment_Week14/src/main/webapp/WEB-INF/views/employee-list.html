@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html  xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color: skyblue;">
+
+
+<table border="2" class="center">
+	<tr>
+		<th>Id</th>
+		<th>Employee Name:</th>
+		<th>Employee Address:</th>
+		<th>Employee Phone:</th>
+		<th>Employee Salary:</th>
+		<th>Action 1</th>
+		<th>Action 2</th>
+	</tr>
+	<tr th:each="temp : ${employee}">
+		<td th:text="${temp.id}"></td>
+		<td th:text="${temp.employeeName}"></td>
+			<td th:text="${temp.employeeAddress}"></td>
+			<td th:text="${temp.employeePhone}"></td>
+			<td th:text="${temp.employeeSalary}"></td>
+			<td><a th:href="@{update-employee-form(id=${temp.id})}">Update</a></td>
+			<td><a th:href="@{delete-employee-form(id=${temp.id})}">Delete</a></td> 
+		</tr>
+</table>
+
+<br>
+<h2 ><a href="employeeadd">Add-Record</a></h2>
+
+</body>
+</html>
+
+<style>
+	.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2{
+	text-align: center;
+}
+a:link, a:visited {
+  background-color: green;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:rgb(255, 0, 0);
+}
+</style>

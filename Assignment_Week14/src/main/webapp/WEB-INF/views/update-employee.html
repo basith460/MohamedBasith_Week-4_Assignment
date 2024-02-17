@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color: mediumpurple;">
+	
+	<form  action="updatesave" method="post" >
+	<table border="2" class="center" >
+		<tr>
+		<th>Employee Id: </th>
+		<td><input type="number" name="id" readonly th:value="${employee.id}"/> </td>
+		</tr>
+		<tr>
+		<th>Employee Name:</th>
+		<td><input type="text" name="empname" th:value="${employee.employeeName}"/></td>
+		</tr>
+		<tr>
+		<th>Employee Address:</th>
+		<td><input type="text" name="empaddress" th:value="${employee.employeeAddress}"/></td>
+		</tr>
+		<tr>
+		<th>Employee Phone:</th>
+		<td><input type="number" name="empphone" th:value="${employee.employeePhone}"/></td>
+		</tr>
+		<tr>
+		<th>Employee Salary:</th>
+		<td><input type="number" name="empsalary" th:value="${employee.employeeSalary}"/></td>
+		</tr>
+		<tr>
+			<td><button type="submit" >Update</button></td>
+			<td><button type="reset">ReSet</button></td>
+		</tr>
+		
+		
+	</table>
+	</form>
+
+</body>
+</html>
+
+<style>
+	
+	.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
